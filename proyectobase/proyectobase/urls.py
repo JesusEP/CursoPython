@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from proyectobase.views import familia, probandoTemplate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('familia/', familia, name='familia'),
+    path('probandoTemplate/', probandoTemplate),
 ]
