@@ -14,9 +14,4 @@ def probandoTemplate(request):
         'apellido':'Perez'
     }
     return render(request, 'template1.html', context = context)
-    # #miHtml = open("C:/Users/jperez/Documents/Django/proyectobase/templates/template1.html")
-    # plantilla = Template(miHtml.read())
-    # miHtml.close()
-    # miContexto = Context()
-    # # documento = plantilla.render(miContexto)
-    # # return HttpResponse(documento)
+    
