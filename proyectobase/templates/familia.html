@@ -33,24 +33,20 @@
             </div>
     </nav>
     <br>
-    <div class="container-fluid">
+    <div class="d-flex" style="margin:2rem">
         {% for familiar in familiares %}
-        <div class="row">
-            <div class="col">
-                <div class="card text-bg-dark" style="width: 18rem;">
-                    {% load static %}
-                    <img src=" " class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h2 class="card-title text-center">{{familiar.alias}}</h2>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-bg-dark"><b>Nombre: </b>{{familiar.name}}</li>
-                            <li class="list-group-item text-bg-dark"><b>Parentesco: </b>{{familiar.kinship}}</li>
-                            <li class="list-group-item text-bg-dark"><b>Edad: </b>{{familiar.age}}</li>
-                            <li class="list-group-item text-bg-dark"><b>Nacimiento: </b>{{familiar.born}}</li>
-                            <li class="list-group-item text-bg-dark"><b>Poder: </b>{{familiar.power}}</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="card text-bg-dark" style="width: 16rem;">
+            {% load static %}
+            <img src="/media/familiares/{{familiar.img}}" class="card-img-top " alt="">
+            <div class="card-body">
+                <h2 class="card-title text-center">{{familiar.alias}}</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-bg-dark"><b>Nombre: </b>{{familiar.name}}</li>
+                    <li class="list-group-item text-bg-dark"><b>Parentesco: </b>{{familiar.kinship}}</li>
+                    <li class="list-group-item text-bg-dark"><b>Edad: </b>{{familiar.age}}</li>
+                    <li class="list-group-item text-bg-dark"><b>Nacimiento: </b>{{familiar.born}}</li>
+                    <li class="list-group-item text-bg-dark"><b>Poder: </b>{{familiar.power}}</li>
+                </ul>
             </div>
         </div>
         {% endfor %}

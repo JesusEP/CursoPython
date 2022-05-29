@@ -8,5 +8,5 @@ class Familia(models.Model):
     born = models.DateField(blank=True, null=True,)
     kinship = models.CharField(max_length=20, blank=True, null=True)
     power = models.CharField(max_length=50, blank=True, null=True)
-    img = models.ImageField(blank=True, null=True, upload_to='static/')
+    img = models.ImageField(blank=True, null=True, upload_to='familiares')
     active = models.BooleanField(default=True)
