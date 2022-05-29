@@ -3,7 +3,9 @@ from django.forms import CharField
 
 class Familia(models.Model):
     name = models.CharField(max_length=30)
+    alias = models.CharField(max_length=30, blank=True, null=True, unique=True)
     age = models.IntegerField()
-    kinship = models.CharField(max_length=20)
-    power = models.CharField(max_length=50)
+    born = models.DateField(blank=True, null=True,)
+    kinship = models.CharField(max_length=20, blank=True, null=True)
+    power = models.CharField(max_length=50, blank=True, null=True)
     active = models.BooleanField(default=True)
