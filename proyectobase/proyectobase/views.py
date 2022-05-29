@@ -5,13 +5,9 @@ from django.http import HttpResponse
 from django.template import Template, Context
 from django.shortcuts import render
 
-def familia (request):
-    return HttpResponse('Probando el familia')
+def familia(request):
+    return render(request, 'familia.html')
 
-def probandoTemplate(request):
-    context = {
-        'nombre':'Jesus',
-        'apellido':'Perez'
-    }
-    return render(request, 'template1.html', context = context)
+def index(request):
+    return render(request, 'index.html')
     
