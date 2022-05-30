@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div class="container-fluir" style="background-color:grey ;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Inicio</a>
@@ -32,26 +33,25 @@
                 </form>
             </div>
     </nav>
-    <br>
-    <div class="d-flex" style="margin:2rem">
-        {% for familiar in familiares %}
-        <div class="card text-bg-dark" style="width: 16rem;">
-            {% load static %}
-            <img src="/media/familiares/{{familiar.img}}" class="card-img-top " alt="">
-            <div class="card-body">
-                <h2 class="card-title text-center">{{familiar.alias}}</h2>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-bg-dark"><b>Nombre: </b>{{familiar.name}}</li>
-                    <li class="list-group-item text-bg-dark"><b>Parentesco: </b>{{familiar.kinship}}</li>
-                    <li class="list-group-item text-bg-dark"><b>Edad: </b>{{familiar.age}}</li>
-                    <li class="list-group-item text-bg-dark"><b>Nacimiento: </b>{{familiar.born}}</li>
-                    <li class="list-group-item text-bg-dark"><b>Poder: </b>{{familiar.power}}</li>
-                </ul>
+        <div class="d-flex" style="margin-top:2rem; margin-left: 2rem;">
+            {% for familiar in familiares %}
+            <div class="card text-bg-dark" style="width: 16rem;">
+                {% load static %}
+                <img src="/media/familiares/{{familiar.img}}" class="card-img-top mx-auto img-fluid" alt="">
+                <div class="card-body">
+                    <h2 class="card-title text-center">{{familiar.alias}}</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-bg-dark"><b>Nombre: </b>{{familiar.name}}</li>
+                        <li class="list-group-item text-bg-dark"><b>Parentesco: </b>{{familiar.kinship}}</li>
+                        <li class="list-group-item text-bg-dark"><b>Edad: </b>{{familiar.age}}</li>
+                        <li class="list-group-item text-bg-dark"><b>Nacimiento: </b>{{familiar.born}}</li>
+                        <li class="list-group-item text-bg-dark"><b>Poder: </b>{{familiar.power}}</li>
+                    </ul>
+                </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-    <img src="C:\Users\jperez\Documents\Django\proyectobase\familia\static\img1.jpg" alt="">
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
     integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
